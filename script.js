@@ -13,11 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleSuccess(position) {
         const { latitude, longitude } = position.coords;
 
-        // Get timezone using Intl.DateTimeFormat
-        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+       
 
         // Redirect to details.html with query parameters
-        window.location.href = `details.html?lat=${latitude}&long=${longitude}&timezone=${timezone}`;
+        window.location.href = `details.html?lat=${latitude}&long=${longitude}`;
     }
 
     function handleError(error) {

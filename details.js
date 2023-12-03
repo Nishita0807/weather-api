@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     latDiv.innerText=`Lat:${latitude}`;
     const longDiv=document.getElementById("long");
     longDiv.innerText=`Long:${longitude}`;
-    const time=document.getElementById("timezone");
-    time.innerText=`Time Zone: ${timezone}`;
+    
     // Display map
     displayMap(latitude, longitude);
     fetchWeatherDetails(latitude, longitude);
@@ -45,7 +44,8 @@ function fetchWeatherDetails(latitude, longitude) {
            pressure.innerText=` Pressure: ${data.main.pressure}`;
            const direction=document.getElementById("direction");
            direction.innerText=` Wind Direction: ${calculateWindDirection(data.wind.deg)}`;
-
+           const time=document.getElementById("timezone");
+           time.innerText=`Time Zone: ${data.timezone}`;
            const uv=document.getElementById("uv");
            uv.innerText=` UV Index: ${data.visibility}`;
            const feels=document.getElementById("feels");
@@ -72,3 +72,5 @@ function calculateWindDirection(degree) {
     // Return the corresponding direction
     return directions[index];
 }
+
+
