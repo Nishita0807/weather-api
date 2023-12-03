@@ -1,0 +1,80 @@
+.details{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    background-color: #360369;
+    color: white;
+    padding:24px;
+    
+}
+
+.details>div:first-child{
+    color: #FFF;
+
+font-family: Montserrat;
+font-size: 54px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.details>div:nth-child(2){
+    color: #FFF;
+
+font-family: Montserrat;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+.lat-lang{
+    display: flex;
+    align-items: flex-start;
+    gap:10px;
+
+}
+
+
+.lat,.lang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #270846;
+    color: #FFF;
+
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding:12px;
+    border-radius: 10px;
+
+}
+
+.weather-data{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+
+    padding:24px;
+}
+
+.weather-data>div:first-child{
+    color: #360369;
+
+font-family: Montserrat;
+font-size: 54px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+@media screen and (max-width: 768px){
+    .lat-lang{
+        flex-direction: column;
+    }
+    .weather-data>div:first-child{
+       font-size: 38px;
+    }
+}
